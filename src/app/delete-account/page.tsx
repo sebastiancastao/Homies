@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Eliminar cuenta | Homies",
   description:
-    "Como cerrar tu cuenta de Homies, eliminar datos principales y solicitar borrado adicional si lo necesitas.",
+    "Como eliminar tu cuenta de Homies y tus datos, desde la app o por correo.",
 };
+
+const CONTACT_EMAIL = "brownseb379@gmail.com";
 
 export default function DeleteAccount() {
   return (
@@ -21,54 +23,45 @@ export default function DeleteAccount() {
             Cuenta y privacidad
           </span>
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
-            Elimina tu cuenta y controla que datos mantenemos.
+            Elimina tu cuenta de Homies.
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-3xl">
-            Puedes cerrar tu cuenta desde la app en cualquier momento. Este proceso borra tu perfil
-            visible, historiales de match y mensajes activos. Algunos registros minimos se conservan
-            por seguridad, facturacion y cumplimiento legal.
+            Puedes eliminar tu cuenta y tus datos en cualquier momento, desde la app o escribiendonos.
           </p>
         </header>
 
         <section className="glass rounded-3xl p-8 shadow-card space-y-6">
-          <h2 className="text-2xl font-semibold text-ink">Pasos para eliminar tu cuenta</h2>
+          <h2 className="text-2xl font-semibold text-ink">Desde la app</h2>
           <ol className="space-y-3 text-muted leading-relaxed list-decimal list-inside">
-            <li>Abre la app de Homies y entra a Ajustes.</li>
-            <li>Selecciona Cuenta &gt; Seguridad y elige Eliminar cuenta.</li>
-            <li>Confirma con tu metodo de acceso (PIN, biometria o contrasena de la tienda).</li>
-            <li>Recibiras un correo confirmando la solicitud. Al completar, tu perfil deja de ser visible.</li>
+            <li>Abre Homies e inicia sesion.</li>
+            <li>Entra a la pestana de tu perfil (el icono de persona en la barra inferior).</li>
+            <li>En la seccion Configuracion, toca Eliminar cuenta.</li>
+            <li>Confirma. La cuenta se borra de inmediato y se cierra tu sesion.</li>
           </ol>
-          <p className="text-sm text-muted">
-            Si no ves la opcion, actualiza la app o escribe a <a className="underline" href="mailto:privacy@homies.app">privacy@homies.app</a>.
+        </section>
+
+        <section className="rounded-3xl border border-ink/5 bg-white/85 p-8 space-y-4">
+          <h2 className="text-2xl font-semibold text-ink">Sin entrar a la app</h2>
+          <p className="text-muted leading-relaxed">
+            Escribe a <a className="underline" href={`mailto:${CONTACT_EMAIL}?subject=Eliminar%20mi%20cuenta%20de%20Homies`}>{CONTACT_EMAIL}</a>{" "}
+            desde el correo con el que te registraste, con el asunto &quot;Eliminar mi cuenta de Homies&quot;.
+            Eliminaremos la cuenta en un plazo maximo de 30 dias y te confirmaremos por correo.
           </p>
         </section>
 
         <section className="rounded-3xl border border-ink/5 bg-white/90 p-8 space-y-4">
-          <h2 className="text-2xl font-semibold text-ink">Que sucede al eliminar</h2>
+          <h2 className="text-2xl font-semibold text-ink">Que datos se eliminan</h2>
           <ul className="list-disc list-inside space-y-2 text-muted leading-relaxed">
-            <li>Tu perfil, fotos y descripciones dejan de mostrarse y ya no recibes matches nuevos.</li>
-            <li>Se eliminan chats activos y coincidencias visibles para otros usuarios.</li>
-            <li>Podemos retener datos minimos para prevenir fraude, gestionar cobros o cumplir leyes.</li>
-            <li>Si vuelves a registrarte, se considera una cuenta nueva y tu historial no se restaura.</li>
+            <li>Tu cuenta: correo, contrasena, nombre y telefono.</li>
+            <li>Tu perfil: datos personales, preferencias de convivencia, descripcion y datos del inmueble.</li>
+            <li>Tus likes, matches y los mensajes del chat.</li>
+            <li>Tu identificador de notificaciones push.</li>
+            <li>Las fotos que subiste, en un plazo maximo de 30 dias.</li>
           </ul>
-        </section>
-
-        <section className="rounded-3xl border border-ink/5 bg-white/85 p-8 space-y-4">
-          <h2 className="text-2xl font-semibold text-ink">Si no tienes acceso a tu cuenta</h2>
           <p className="text-muted leading-relaxed">
-            Escribenos desde el correo asociado a la cuenta a <a className="underline" href="mailto:privacy@homies.app">privacy@homies.app</a>
-            indicando tu nombre, numero de telefono registrado y ultimo dispositivo usado. Verificaremos identidad y cerraremos la cuenta
-            manualmente.
+            No conservamos copias de estos datos despues de eliminarlos, salvo que una autoridad lo exija por
+            ley. Si vuelves a registrarte, se crea una cuenta nueva sin tu historial anterior.
           </p>
-        </section>
-
-        <section className="rounded-3xl border border-ink/5 bg-white/95 p-8 space-y-3">
-          <h2 className="text-2xl font-semibold text-ink">Solicitudes adicionales</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted leading-relaxed">
-            <li>Pide copia o borrado adicional de datos escribiendo a privacy@homies.app.</li>
-            <li>Incluye capturas de la app o comprobantes de pago si aplican.</li>
-            <li>Las respuestas pueden tardar mientras verificamos identidad y obligaciones legales.</li>
-          </ul>
         </section>
       </main>
     </div>

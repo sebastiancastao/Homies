@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Politica de privacidad | Homies",
   description:
-    "Detalles sobre como Homies recolecta, usa y comparte datos para operar la plataforma y ofrecer experiencias personalizadas.",
+    "Que datos recoge la app Homies, para que los usa, con quien los comparte y como puedes eliminarlos.",
 };
+
+const CONTACT_EMAIL = "brownseb379@gmail.com";
 
 export default function PrivacyPolicy() {
   return (
@@ -21,12 +23,12 @@ export default function PrivacyPolicy() {
             Politica de privacidad
           </span>
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
-            Recogemos datos para operar, personalizar y hacer crecer Homies.
+            Que datos usa Homies y para que.
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-3xl">
-            Al usar Homies aceptas una recoleccion amplia de datos personales, tecnicos y de uso
-            para ofrecer coincidencias, seguridad, marketing y mejoras continuas. Esta politica
-            explica el alcance de la informacion que reunimos y como la usamos y compartimos.
+            Homies es una app para encontrar roomies y lugares para vivir en Colombia. Esta politica
+            explica que informacion recogemos, como la usamos y como puedes eliminarla. Ultima
+            actualizacion: 24 de octubre de 2026.
           </p>
         </header>
 
@@ -34,73 +36,85 @@ export default function PrivacyPolicy() {
           <h2 className="text-2xl font-semibold text-ink">Datos que recopilamos</h2>
           <div className="grid md:grid-cols-2 gap-4 text-muted leading-relaxed">
             <ul className="space-y-2 list-disc list-inside">
-              <li>Identidad y contacto: nombre, alias, foto, email, telefono, documento o identificadores estatales.</li>
-              <li>Datos de dispositivo: modelo, sistema operativo, identificadores unicos, ajustes, redes y datos de bateria.</li>
-              <li>Ubicacion y movimientos: coordenadas GPS precisas, direcciones IP, puntos de acceso cercanos y patrones de desplazamiento.</li>
-              <li>Contenido generado: descripciones de perfil, intereses, respuestas, fotos, audio, video y metadatos asociados.</li>
+              <li>Cuenta: correo electronico, contrasena (la guarda cifrada nuestro proveedor de autenticacion), nombre y telefono si decides agregarlo.</li>
+              <li>Perfil: fecha de nacimiento (para confirmar que eres mayor de 18 anos), genero, ciudad, barrio, direccion actual si la escribes, presupuesto y fecha de mudanza.</li>
+              <li>Convivencia: mascotas, si fumas, horarios, limpieza, visitas, bebidas, cocina, estrato y el genero con el que prefieres vivir.</li>
             </ul>
             <ul className="space-y-2 list-disc list-inside">
-              <li>Actividad en la app: swipes, mensajes, tiempos de respuesta, clics, pantallas vistas y sesiones.</li>
-              <li>Pagos y garantias: metodos de pago, historiales de cobro, depositos y verificacion antifraude.</li>
-              <li>Datos de terceros: referencias, redes sociales conectadas, listas de contactos (si se habilita) y datos de socios publicitarios.</li>
-              <li>Senales de seguridad: reportes de abuso, verificaciones biometricas o de rostro (cuando las habilites) y patrones de riesgo.</li>
+              <li>Fotos y descripcion: tus fotos de perfil, las fotos de tu espacio y los detalles del inmueble si ofreces un lugar (precio, tipo, tamano y comodidades).</li>
+              <li>Actividad en la app: los perfiles que te gustan o descartas, tus matches y los mensajes que envias en el chat.</li>
+              <li>Dispositivo: un identificador para enviarte notificaciones push y tus ajustes de notificaciones.</li>
             </ul>
           </div>
+          <p className="text-muted leading-relaxed">
+            No accedemos al GPS de tu telefono, a tus contactos, a tu microfono ni a tu camara. La ubicacion
+            que usamos es la ciudad y el barrio que tu escribes. Solo accedemos a tu galeria cuando eliges una
+            foto para subir. No mostramos publicidad ni usamos herramientas de analitica de terceros.
+          </p>
         </section>
 
         <section className="rounded-3xl border border-ink/5 bg-white/75 p-8 space-y-4">
           <h2 className="text-2xl font-semibold text-ink">Como usamos la informacion</h2>
-          <div className="space-y-2 text-muted leading-relaxed">
-            <p>
-              Utilizamos estos datos para operar funciones basicas (cuentas, matches, mensajes), personalizar resultados,
-              mejorar algoritmos, detectar fraude y cumplir requisitos legales. Tambien los usamos para marketing propio y de
-              socios, segmentacion de audiencias, medicion de campanas y desarrollo de nuevos productos.
-            </p>
-            <p>
-              Podemos combinar datos con fuentes publicas y de terceros para enriquecer perfiles, asociarlos entre dispositivos
-              y mantener historiales aunque cierres o reinstales tu cuenta.
-            </p>
-          </div>
+          <ul className="list-disc list-inside space-y-2 text-muted leading-relaxed">
+            <li>Crear y mantener tu cuenta e iniciar sesion.</li>
+            <li>Mostrarte perfiles y lugares compatibles con tus preferencias.</li>
+            <li>Permitir los matches y el chat entre usuarios.</li>
+            <li>Enviarte notificaciones de nuevos matches y mensajes.</li>
+            <li>Proteger la plataforma contra abusos y atender tus solicitudes de soporte.</li>
+          </ul>
         </section>
 
         <section className="rounded-3xl border border-ink/5 bg-white/90 p-8 space-y-4">
-          <h2 className="text-2xl font-semibold text-ink">Tecnologias de seguimiento</h2>
+          <h2 className="text-2xl font-semibold text-ink">Que ven otros usuarios</h2>
           <p className="text-muted leading-relaxed">
-            Empleamos cookies, SDKs, pixeles, almacenamiento local, identificadores de publicidad, huellas de dispositivo y
-            telemetry en tiempo real para entender uso, prevenir abuso y crear perfiles de interes. Algunas tecnologias siguen
-            activas incluso si desactivas ciertas cookies en el dispositivo.
+            Tu perfil (nombre, edad, fotos, ciudad, barrio, descripcion, preferencias de convivencia y, si
+            ofreces un lugar, los datos del inmueble) es visible para otros usuarios de Homies, porque ese es
+            el objetivo de la app. Los mensajes del chat solo los ven las personas de esa conversacion.
           </p>
         </section>
 
         <section className="glass rounded-3xl p-8 shadow-card space-y-4">
           <h2 className="text-2xl font-semibold text-ink">Con quien compartimos los datos</h2>
+          <p className="text-muted leading-relaxed">
+            No vendemos tu informacion ni la compartimos con anunciantes. Solo la procesan los proveedores que
+            hacen funcionar la app:
+          </p>
           <ul className="list-disc list-inside space-y-2 text-muted leading-relaxed">
-            <li>Proveedores y socios que alojan, procesan pagos, verifican identidad, analizan datos y ofrecen soporte.</li>
-            <li>Anunciantes, redes publicitarias y socios de medicion para segmentar, atribuir y optimizar campanas.</li>
-            <li>Afiliadas corporativas, potenciales compradores o inversionistas en caso de fusion, adquisicion o venta.</li>
-            <li>Autoridades cuando sea requerido o para proteger derechos, prevenir fraudes y garantizar seguridad.</li>
-            <li>Otros usuarios de la plataforma segun la configuracion de tu perfil y las funciones que utilices.</li>
+            <li>Supabase: base de datos, inicio de sesion y almacenamiento de fotos.</li>
+            <li>Expo y Google Firebase Cloud Messaging: envio de notificaciones push.</li>
+            <li>Google Maps: mostrar en el mapa la zona de un inmueble.</li>
+            <li>Autoridades, solo cuando la ley lo exija.</li>
           </ul>
+          <p className="text-muted leading-relaxed">
+            Todos los datos viajan cifrados (HTTPS) entre tu telefono y estos servicios.
+          </p>
         </section>
 
         <section className="rounded-3xl border border-ink/5 bg-white/85 p-8 space-y-4">
-          <h2 className="text-2xl font-semibold text-ink">Retencion y control</h2>
+          <h2 className="text-2xl font-semibold text-ink">Conservacion y eliminacion</h2>
           <p className="text-muted leading-relaxed">
-            Conservamos datos mientras la cuenta este activa y por periodos extendidos para fines legales, de seguridad,
-            auditoria y mejora del servicio. Algunas copias o registros derivados pueden mantenerse de forma indefinida.
-            Puedes solicitar acceso, correccion o eliminacion escribiendo a privacy@homies.app; la eliminacion puede ser
-            parcial o diferida segun nuestras obligaciones.
+            Guardamos tus datos mientras tu cuenta este activa. Puedes eliminar tu cuenta en cualquier momento
+            desde la app, en Cuenta &gt; Eliminar cuenta. Al hacerlo se borran tu perfil, tus likes, matches y
+            mensajes. Las fotos que subiste se eliminan en un plazo maximo de 30 dias. Tambien puedes pedir la
+            eliminacion sin entrar a la app siguiendo los pasos de{" "}
+            <a className="underline" href="/delete-account">esta pagina</a>.
           </p>
         </section>
 
         <section className="rounded-3xl border border-ink/5 bg-white/95 p-8 space-y-3">
-          <h2 className="text-2xl font-semibold text-ink">Tus opciones</h2>
+          <h2 className="text-2xl font-semibold text-ink">Tus derechos</h2>
           <ul className="list-disc list-inside space-y-2 text-muted leading-relaxed">
-            <li>Configura permisos de ubicacion, camara, microfono, contactos o notificaciones en tu dispositivo.</li>
-            <li>Gestiona preferencias de marketing en los ajustes de tu cuenta; algunas comunicaciones de servicio son obligatorias.</li>
-            <li>Desactiva anuncios basados en intereses en el dispositivo; seguiremos midiendo rendimiento y seguridad.</li>
-            <li>Solicita copias o borrado de datos en privacy@homies.app. Responderemos conforme a la ley aplicable.</li>
+            <li>Consultar y corregir tus datos editando tu perfil en la app.</li>
+            <li>Pedir una copia o la eliminacion de tus datos escribiendo a{" "}
+              <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</li>
+            <li>Desactivar las notificaciones o el acceso a la galeria desde los ajustes de tu telefono.</li>
+            <li>Presentar reclamos ante la Superintendencia de Industria y Comercio, segun la Ley 1581 de 2012.</li>
           </ul>
+          <p className="text-muted leading-relaxed">
+            Homies es solo para mayores de 18 anos. Si cambiamos esta politica, actualizaremos la fecha de
+            esta pagina. Para cualquier pregunta escribe a{" "}
+            <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+          </p>
         </section>
       </main>
     </div>
